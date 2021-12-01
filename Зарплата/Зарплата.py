@@ -13,3 +13,5 @@ while 1:
     elif b=='3':
         vastus=udal(inim,mon)
         print(vastus)
+    elif b=='4':
+        mox(mon,inim)

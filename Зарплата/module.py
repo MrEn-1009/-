@@ -1,5 +1,5 @@
 def dopol(mon,inim):
-    '''
+    '''Добавляет нового человека и его зарплату
     '''
     while 1:
         use=input('Sisesta inimene:')
@@ -11,7 +11,7 @@ def dopol(mon,inim):
         break
     return mon,inim
 def koik(inim,mon):
-	'''
+	'''Показывает всех людей
     '''
 	i=0
 	for user in inim:
@@ -38,7 +38,7 @@ def poisk(inim:list,mon:list):
             t='Ei ole nimekirjas'
     return t
 def udal(inim:list,mon:list):
-    '''
+    '''Удаляет пользователя и его зарплату
     '''
     a=input('Keda otsime?')
     if a not in inim:
@@ -47,5 +47,14 @@ def udal(inim:list,mon:list):
         b=inim.index(a)
         inim.remove(a)
         mon.pop(b)
-def max()
-
+def mox(mon:list,inim:list):
+    '''Ищет максимальную сумму и кто её получает
+    '''
+    mom=max(mon)
+    n=mon.count(mom)
+    for i in mon:
+        if i==mom:
+            b=mon.index(i)
+            break
+    inil=inim[b]
+    print(inil ,'-', mom)
